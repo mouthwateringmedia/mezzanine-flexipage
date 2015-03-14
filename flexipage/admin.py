@@ -34,10 +34,11 @@ class FlexiContentInline(StackedDynamicInlineAdmin):
     fk_name = 'page'
     formset = FlexiContentInlineFormset
     extra = 0
-    
+    readonly_fields = ['name']
+
     class Media:
         js = ('js/admin/save_modelform_onchange.js',)
-        
+
 
 class FlexiPageAdmin(PageAdmin):
     inlines = (FlexiContentInline,)
