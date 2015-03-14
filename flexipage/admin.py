@@ -41,6 +41,5 @@ class FlexiContentInline(StackedDynamicInlineAdmin):
 
 class FlexiPageAdmin(PageAdmin):
     inlines = (FlexiContentInline,)
-    fields = ('')
-    
+
 admin.site.register(FlexiPage, FlexiPageAdmin)
